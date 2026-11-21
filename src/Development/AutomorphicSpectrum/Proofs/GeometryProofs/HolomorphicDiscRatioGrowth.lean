@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.DvrPointAnalyticDiscStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.GenericPointComponentLocalRing
 import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.InjectiveOfIsCptGen

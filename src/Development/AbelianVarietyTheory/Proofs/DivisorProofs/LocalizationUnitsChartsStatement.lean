@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LocalizationUnitsCharts
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnitChartAt
 
 set_option autoImplicit false
 

@@ -1,13 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ProperLeftVariablesDomain
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.OrbSplitPt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RhsInt
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableUnipotentRankOne
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AsmCastVCastV
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.SliceCompactSupportCoefficient
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComponentFamilySettingOfSetting
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.UpperMinorOfLevelPoint
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CornerBlockActionInvariant
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PsiNormalization
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutHB2
+import Formalism.HermitianCurvature.HermitianCurvatureProofs.LowVLift
 
 open Matrix MeasureTheory
 
@@ -143,7 +139,7 @@ theorem point_level_zero_eq_embedding (P : M.Par) (hj : 0 + 1 ≤ P.r) (Z : Matr
     rw [LevelPointCoordinates.zfull_apply]
     have hi : i.val = 0 := by have := i.isLt; omega
     have hl : l.val = 0 := by have := l.isLt; omega
-    simp [hi]
+    simp
   unfold LevelPointCoordinates.x0 LevelPointCoordinates.mLev
   rw [hz]
 

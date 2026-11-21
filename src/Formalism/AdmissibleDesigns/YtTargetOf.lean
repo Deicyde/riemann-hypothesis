@@ -1,4 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.AdmissibleDesigns.YtRepZero
+import Formalism.AdmissibleDesigns.YtTarget
 
 variable [hT2Core : Fact ReciprocityTheory.ChartRestriction.T2.Core]
 

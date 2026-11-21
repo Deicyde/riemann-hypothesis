@@ -1,8 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.PoitouTate.PoitouTateInfinite.Restrict
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.BrauerFrob
 import GroundTheory.ProfiniteCohomology.RestrictedRamification.ClassFieldGSUnram
-import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.Ramified
 import GroundTheory.ArithmeticGeometry.SelmerPairing.Unramified
 set_option maxSynthPendingDepth 1
 

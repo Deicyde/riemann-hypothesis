@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ChangeOfVariablesInjectiveIndicator
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ContinuousAndSmul
 open Filter Topology Set Metric MeasureTheory GlobalTheory.ChernReg
 open scoped ContDiff
 set_option maxHeartbeats 1000000 in

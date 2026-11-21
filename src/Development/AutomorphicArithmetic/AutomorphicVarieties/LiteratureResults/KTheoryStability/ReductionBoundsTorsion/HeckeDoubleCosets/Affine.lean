@@ -1,4 +1,10 @@
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.HeckeDoubleCosets.PHeckeFormal
+import Development.AutomorphicArithmetic.AutomorphicVarieties.LiteratureResults.KTheoryStability.ReductionBoundsTorsion.HeckeDoubleCosets.MapPartialProd
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.Ideal.Quotient.HasFiniteQuotients
 
 noncomputable section
 
@@ -283,8 +289,8 @@ theorem pStabVan : PStabVan := by
     obtain ⟨a, rfl⟩ := finSumFinEquiv.surjective a
     obtain ⟨b, rfl⟩ := finSumFinEquiv.surjective b
     rcases a with a | a <;> rcases b with b | b
-    · simp only [Matrix.reindex_apply, Matrix.submatrix_apply, finSumFinEquiv_apply_left, finSumFinEquiv_apply_right,
-        finSumFinEquiv_symm_apply_castAdd, finSumFinEquiv_symm_apply_natAdd, Matrix.fromBlocks_apply₁₁]
+    · simp only [Matrix.reindex_apply, Matrix.submatrix_apply, finSumFinEquiv_apply_left,
+        finSumFinEquiv_symm_apply_castAdd]
       apply aff_alg_inj
       rw [← aff_toK_val, hM, aff_blk_top]
       rfl
@@ -300,8 +306,8 @@ theorem pStabVan : PStabVan := by
       have := congrArg Fin.val hh
       simp only [Fin.val_castAdd, Fin.val_natAdd] at this
       omega
-    · simp only [Matrix.reindex_apply, Matrix.submatrix_apply, finSumFinEquiv_apply_left, finSumFinEquiv_apply_right,
-        finSumFinEquiv_symm_apply_castAdd, finSumFinEquiv_symm_apply_natAdd]
+    · simp only [Matrix.reindex_apply, Matrix.submatrix_apply, finSumFinEquiv_apply_right,
+        finSumFinEquiv_symm_apply_natAdd]
       show (f x : Matrix (Fin (n + r)) (Fin (n + r)) (𝓞 L)) (Fin.natAdd n a) (Fin.natAdd n b) =
         (1 : Matrix (Fin r) (Fin r) (𝓞 L)) a b
       apply aff_alg_inj

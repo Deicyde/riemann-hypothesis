@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Definitions.MetricPeriods.HasMultiplier
+import Std.Tactic.BVDecide.Normalize.Prop
 
 noncomputable section
 
@@ -48,7 +50,7 @@ theorem homog_X (k : K) (i : ι k) : IsMultiHomog (X ⟨k, i⟩ : MRing ι) (Pi.
   · subst h
     simp [Finsupp.single_apply]
   · have : ∀ j : ι k', (⟨k, i⟩ : Σ k, ι k) ≠ ⟨k', j⟩ := fun j e => h (congrArg Sigma.fst e).symm
-    simp [Finsupp.single_apply, this, h, Pi.single_apply]
+    simp [h]
 
 theorem homog_pow {f : MRing ι} {a : K → ℕ} (hf : IsMultiHomog f a) (n : ℕ) :
     IsMultiHomog (f ^ n) (n • a) := by

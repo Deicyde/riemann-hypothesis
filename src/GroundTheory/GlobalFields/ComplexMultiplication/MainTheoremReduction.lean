@@ -1,7 +1,6 @@
-import Mathlib
-import GroundTheory.GlobalFields.ComplexMultiplication.ReductionEval
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.ComplexMultiplication.FrobeniusAtPrimes
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.KodairaNeron
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Global

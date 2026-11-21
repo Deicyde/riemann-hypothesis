@@ -1,6 +1,9 @@
-import Mathlib
-import GroundTheory.PAdicHodge.FWGlue
-import GroundTheory.PAdicHodge.TiltEquiv
+import BuildAid.Leniency.Variable
+import GroundTheory.PAdicHodge.TiltField
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.FieldTheory.AbsoluteGaloisGroup
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 set_option maxSynthPendingDepth 1
 
 noncomputable section

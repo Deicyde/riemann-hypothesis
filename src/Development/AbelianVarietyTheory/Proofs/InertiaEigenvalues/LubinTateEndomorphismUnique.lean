@@ -1,7 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Statements.WeilDeligneCrystalline.ColmezLT
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.EqZeroOfInAMul
-import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsKerPowDvd
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.LtSeries
+import GroundTheory.LocalFields.FormalGroups.LubinTateGroup
 
 noncomputable section
 

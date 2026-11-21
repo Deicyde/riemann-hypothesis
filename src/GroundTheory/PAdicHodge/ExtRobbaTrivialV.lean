@@ -1,9 +1,7 @@
-import Mathlib
-import GroundTheory.PAdicHodge.SlopeFiltration
-import GroundTheory.PAdicHodge.ExtRobbaEigen
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.PAdicHodge.ExtRobbaOrd
-import GroundTheory.PAdicHodge.DMTeichPow
-import GroundTheory.PAdicHodge.DMTeichBasic
+import GroundTheory.PAdicHodge.ExistsWeightLeOfConvergesAt
 set_option maxSynthPendingDepth 1
 
 noncomputable section

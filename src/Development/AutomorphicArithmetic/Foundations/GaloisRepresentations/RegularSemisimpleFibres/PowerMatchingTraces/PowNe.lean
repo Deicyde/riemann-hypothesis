@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.PowerMatchingTraces.MatchPowAlt
 import Development.AutomorphicArithmetic.Foundations.Convolution.PowerSumTraces.PowIndep
 

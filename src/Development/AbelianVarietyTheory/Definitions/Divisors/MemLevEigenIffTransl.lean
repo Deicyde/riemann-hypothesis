@@ -1,9 +1,8 @@
-import Mathlib
-import Formalism.LocalToGlobal.ProjectiveLattices.ThClassPins
-import Formalism.LocalToGlobal.ProjectiveLattices.ThShort
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Foundations.IsProbabilityMeasureMuPart
 import Development.AbelianVarietyTheory.Definitions.Divisors.IsCoprimeOfNatCast
-import Development.AbelianVarietyTheory.Proofs.UnitaryExistence.FramedPointBaseChangeUniqueReflIff
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ActLevFullLevelGroupFramedPoints
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.LiftedCharacterResidue
 

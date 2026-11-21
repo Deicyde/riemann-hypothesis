@@ -1,6 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.DiscreteValuationNumbers.Objects
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsSemipositiveOn
+import Mathlib.Algebra.Lie.OfAssociative
+import Mathlib.Algebra.Order.PUnit
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.Kleiman
@@ -505,7 +514,7 @@ def chartRing (I : Chart x) : Subalgebra S Ω where
     simp only [map_add, map_mul]
   zero_mem' := ⟨0, 1, 0, one_mem _, isHomogeneous_zero _ _ _, isHomogeneous_one _ _, by simp⟩
   algebraMap_mem' r := ⟨C r, 1, 0, one_mem _, isHomogeneous_C _ _, isHomogeneous_one _ _, by
-    simp [aeval_C]⟩
+    simp⟩
 
 variable (S x) in
 

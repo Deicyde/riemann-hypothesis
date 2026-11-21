@@ -1,9 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ModelDdcForms
-import ReciprocityTheory.AnalyticForms.PotentialTheory.PshShiftA
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.NormalSectionSmoothPolydiscStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SmoothBoundedGradientOnHalfBallStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LogNormSqGradientIdentityStatement
+import Mathlib.Analysis.Real.Pi.Bounds
 open ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.ModelDdcForms MeasureTheory
 open scoped ContDiff
 
@@ -216,8 +215,8 @@ theorem compBounds : ∀ {e : ℕ} {X : Type} [TopologicalSpace X] (A : FinHolAt
           + (-(fderiv ℝ (fun y : Fin e → ℂ => Real.log (‖y k‖ ^ 2)) z (Complex.I • w))
               + fderiv ℝ (f i) z (Complex.I • w)) ^ 2) / 4) := by
         unfold gradSqAt; rw [hd]
-        simp only [ContinuousLinearMap.add_apply, ContinuousLinearMap.sub_apply,
-          ContinuousLinearMap.zero_apply, zero_sub, ContinuousLinearMap.neg_apply]
+        simp only [ContinuousLinearMap.add_apply,
+          zero_sub, ContinuousLinearMap.neg_apply]
       simp only [Option.elim]
       rw [hgeq]
       exact core hab (by positivity) ((hCf i z hzc).2 w) hS (hCf0 i) (by linarith) ht0 hrA hrB hr1

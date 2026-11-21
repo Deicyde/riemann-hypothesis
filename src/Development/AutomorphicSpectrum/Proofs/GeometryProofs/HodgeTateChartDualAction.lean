@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsExtendLin
 
 namespace GlobalTheory.CompanionTheory.Ar.Flat.HTL

@@ -1,8 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianLattices.HermitianLatticesProofs.UnimodUnramUnique
 import Formalism.LocalRingCardinality.DataHost
-import Formalism.FrobeniusOrbits.HostCorollaries
 import Formalism.SatakeDualWeyl.Statement
+import Mathlib.Data.Int.Star
 
 open IsDedekindDomain HeightOneSpectrum IsLocalRing WithZero NumberField Filter Topology
 

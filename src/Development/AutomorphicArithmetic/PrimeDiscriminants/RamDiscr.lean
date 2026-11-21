@@ -1,6 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataHost
 import Development.AutomorphicArithmetic.PrimeDiscriminants.SmallRam
+import Mathlib.RingTheory.TotallySplit
 
 open NumberField IsDedekindDomain Ideal
 

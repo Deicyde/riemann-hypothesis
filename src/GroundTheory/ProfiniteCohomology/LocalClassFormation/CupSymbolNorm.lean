@@ -1,9 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.CupProducts.Projection
-import GroundTheory.ProfiniteCohomology.CupProducts.Cocycles
 import GroundTheory.ProfiniteCohomology.ClassFormations.Corestriction
 import GroundTheory.ProfiniteCohomology.CyclicCupProf
-import GroundTheory.ProfiniteCohomology.GaloisCohomology.Kummer
 import GroundTheory.ProfiniteCohomology.LocalEulerCharacteristic.H0IsoHomCohomologyClassZero
 set_option maxSynthPendingDepth 1
 

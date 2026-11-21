@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.StatementTL
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ReflectionTransposeEntriesMem
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.PairOperatorCommute
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.LiftMatrixTransferConjTransposeCommute
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FreeOf2RmatrixTranspose
 
 namespace Formalism.FourierDecayAlt.P.TLA.W4
 

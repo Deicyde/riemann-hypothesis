@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SurjectiveOfIsPullbackSqZero
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsCrystallineFormLiftDifferenceEqSum
 
 set_option autoImplicit false
@@ -87,7 +87,7 @@ theorem exists_derHom (y : Sp (DualNumber (Sec s U.1)) ⟶ X)
         simp [Algebra.smul_def, TrivSqZeroExt.algebraMap_eq_inl']
       map_one_eq_zero' := by simp
       leibniz' := fun a b ↦ by
-        simp only [map_mul, TrivSqZeroExt.snd_mul, smul_eq_mul]
+        simp only [smul_eq_mul]
         simp [MulOpposite.smul_eq_mul_unop, hfst]
         ring }
   refine ⟨d.liftKaehlerDifferential, ?_⟩

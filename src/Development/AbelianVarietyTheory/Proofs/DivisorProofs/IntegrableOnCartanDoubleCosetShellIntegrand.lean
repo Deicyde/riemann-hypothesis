@@ -1,7 +1,7 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IndicatorIntMMemSB
-import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.ScaledIntegerPeriodic
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EventuallyDeepSubset
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.RankEqCardIffExistsFrameMatrixFirstColumnBlock
+import Formalism.DoubleCosetMeasures.StatementZ
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
 open MeasureTheory ValuativeRel Matrix GlobalTheory.SplitWeil GlobalTheory.SplitFlip GlobalTheory.KSplit
 attribute [-instance] Formalism.DoubleCosetMeasures.instMeasGL Formalism.DoubleCosetMeasures.instMeasMat
 open GlobalTheory.IndefiniteRowSideFullHecke.ScaledIntegerPeriodic
@@ -19,7 +19,7 @@ theorem integrableOn_shell : ∀ (k : Type) [Field k] [ValuativeRel k] [Topologi
   let χ : GL (Fin a) k →* ℂ :=
     { toFun := fun g => (ν (gdet g) : ℂ) * apow (gdet g) z
       map_one' := by simp
-      map_mul' := fun g h => by simp only [gdet_mul, map_mul, Units.val_mul, apow_mul]; ring }
+      map_mul' := fun g h => by simp only [map_mul, Units.val_mul, apow_mul]; ring }
   have hχ1 : ∀ g ∈ detCong (ϖ ^ e) (Fin a), χ g = 1 := by
     intro g hg
     have h1 : ν (gdet g) = 1 := hν _ hg.2

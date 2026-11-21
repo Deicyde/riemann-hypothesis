@@ -1,11 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.IsobaricDiscreteSelfDualStrongMultiplicityOne
 import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.RankOneUnitary
-import Development.AbelianVarietyTheory.Definitions.GaloisGeometry.NotIsobaricRigid
 import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.TeichmullerInertiaLabelCondition
-import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DepthZeroLabelsOfLabelLaws
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTameGenAt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ExistsTeichmullerMaps
 
 noncomputable section
 

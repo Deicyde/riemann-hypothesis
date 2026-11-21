@@ -1,7 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.LeadMinorK
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.Admissible
-import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.ThresholdProductsBounded
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.IntegrableUnipotentNormRpowNeg
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.UnipotentLevelZeroEqOne
 import Development.AbelianVarietyTheory.Proofs.FlagMeasures.IsOrbQuotWithDensity

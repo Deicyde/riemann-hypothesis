@@ -1,7 +1,6 @@
-import Formalism.LocalToGlobal.Columns.XiFirstLawAllLevels
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.ChainLawPhiPf
-import Formalism.LocalToGlobal.Columns.ChainLawXi
-import Formalism.LocalToGlobal.Columns.ChainLawXiTgt
 
 open NumberField IsDedekindDomain
 

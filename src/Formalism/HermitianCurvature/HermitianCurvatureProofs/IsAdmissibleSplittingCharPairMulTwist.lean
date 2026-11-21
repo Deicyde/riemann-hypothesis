@@ -1,24 +1,11 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RhoAntitoneOfInterlacing
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.QuasiDeterminantFromEntries
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.ResidueForm
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FrameOfAdmissibleWord
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AdmissibleRecOfAdmissibleWord
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.L0ConstantPartCommute
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.FreeOf2RmatrixTranspose
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.EnergyEstimateFromParts
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.DerivedCoefficientIntegrable
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.SquareIntegrableGammaZetabarInv
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.InterlaceSignTwo
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ModelWordsAssemble
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleGD
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleInv
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RuleSS
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.PositionInsertionDiagonalCompat
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ScalarCommuteTransposedRMatrixEntry
-import Formalism.HermitianCurvature.StatementFr
-import Formalism.HermitianCurvature.StatementMA
-import Formalism.HermitianCurvature.StatementR
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.PolyInMul
 
 section S_T1
@@ -5429,7 +5416,7 @@ theorem eeA_split (P : M.Par) (Y : ℂ) :
     simp_rw [← smul_mul_assoc, ← Finset.sum_mul, ← map_smul, ← map_sum]
     congr 2
     funext π
-    simp [Finset.sum_apply, Pi.smul_apply, Finset.sum_ite_eq', sub_neg_eq_add]
+    simp [Finset.sum_apply, Pi.smul_apply, sub_neg_eq_add]
   simp_rw [e1]
   rw [Fin.sum_univ_eq_sum_range (fun i => (kap P (DQ P) fun π => (Y + (M.rho P π (i + 1) : ℂ))⁻¹) * SS P (DQ P) (i + 1))]
   have e2 : Finset.Icc 1 (P.k - 1) = Finset.Ico 1 (P.k - 1 + 1) := by ext i; simp
@@ -9251,7 +9238,7 @@ theorem SSs_comm_SC (i : ℕ) {x : A P (DQ P)} (hx : x ∈ SC P) :
     refine ⟨star w, ?_⟩
     ext a b
     rw [Matrix.star_apply]
-    simp only [RingHom.coe_coe, Matrix.scalar_apply, Matrix.diagonal_apply]
+    simp only [Matrix.scalar_apply, Matrix.diagonal_apply]
     by_cases h : a = b
     · subst h; simp
     · simp [h, Ne.symm h])

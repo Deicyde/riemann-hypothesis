@@ -1,6 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.FunJetApply
-import Development.AbelianVarietyTheory.Proofs.HeightProofs.IsKStableOnOfLieStableFiniteDim
+import Development.AbelianVarietyTheory.Definitions.SemilocalFrames.PosPartUnitaryMul
+import Formalism.RealPlaceAnalysis.RealPlaceTaylor.CompactExponentialSurjective
+import Mathlib.Analysis.Calculus.Deriv.Star
+import Mathlib.Analysis.ODE.ExistUnique
 
 open Matrix MeasureTheory Filter Topology Formalism.MainNotions.S Formalism.REAL Formalism.QuantumDeterminants GlobalTheory.Count GlobalTheory.Dec GlobalTheory.SphJet
 open scoped InnerProductSpace ComplexOrder Matrix.Norms.L2Operator
@@ -65,8 +69,8 @@ theorem vmstab_conj_thE {ε : Fin n → Bool} {k : Matrix (Fin n) (Fin n) ℂ} (
   rw [Matrix.inv_eq_left_inv hl]
   obtain ⟨a, b⟩ := p
   ext i j
-  simp [thE, Matrix.mul_apply, Matrix.sum_apply, Matrix.single_apply, Fintype.sum_prod_type, Finset.sum_mul,
-    Finset.mul_sum, ite_and]
+  simp [thE, Matrix.mul_apply, Matrix.sum_apply, Matrix.single_apply, Fintype.sum_prod_type,
+    ite_and]
   by_cases h1 : ε a = ε j
   · by_cases h2 : ε b = ε i
     · simp only [Formalism.REAL.sgn, h1, h2]
@@ -217,7 +221,7 @@ theorem familyArrayLinearMap_matrixUnitFamilyActionGenerator (E : Fin n → Fin 
   ext α
   obtain ⟨⟨a, b⟩, rfl⟩ : ∃ p, α = fun _ => p := ⟨α 0, funext fun i => by rw [Subsingleton.elim i 0]⟩
   simp [isometryArrayLinearMap, arr1, arrE, factorAction, ptE, arrTo, arrOf, actM, vmGen_apply, ha, Finset.sum_add_distrib,
-    smul_add, smul_sub, Finset.sum_sub_distrib, hYe', hite, smul_ite, hs1, hs2,
+    smul_add, smul_sub, Finset.sum_sub_distrib, hYe', hite, smul_ite,
     LinearMap.sum_apply, map_sum, map_smul, neg_smul, Finset.sum_neg_distrib]
   abel
 
@@ -378,7 +382,7 @@ theorem vminus_stable_under_K : ∀ (V W : Type) [NormedAddCommGroup V] [InnerPr
   refine Finset.sum_congr rfl fun q _ => Finset.sum_congr rfl fun p _ => ?_
   rw [hadj k (vmstab_mem_KC hk).1 w (G p)]
   congr 1
-  simp only [G₀, PiLp.toLp_apply]
+  simp only [G₀]
   ring
 
 end GlobalTheory.SphJet

@@ -1,5 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.SiegelWeilAnisotropicWitt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Divisors.IsWeilFormulas
 
 noncomputable section
 
@@ -105,7 +106,7 @@ theorem exists_data (h : IsCMExt F E σ) (n m : ℕ) :
   let Z : Matrix (Fin n) (Fin n) E := (-(b / 2)) • 1
   have hT : blk 1 Z 1 (-Z) * blk ((2 : E)⁻¹ • 1) ((2 : E)⁻¹ • 1) ((-b⁻¹) • 1) (b⁻¹ • 1) = 1 := by
     rw [blk_mul, ← blk_one]
-    congr 1 <;> simp only [Z, Matrix.one_mul, Matrix.mul_one, Matrix.smul_mul, Matrix.mul_smul, Matrix.neg_mul] <;>
+    congr 1 <;> simp only [Z, Matrix.mul_one, Matrix.mul_smul] <;>
       match_scalars <;> field_simp <;> ring
   let T : GL (Fin (n + n)) E := ⟨_, _, hT, mul_eq_one_comm.1 hT⟩
   refine ⟨b, b • 1, 1, T, ha0, ⟨fun i j => ?_, ?_⟩, fun x hx => funext fun i => ?_, fun i j => ?_, Z, ?_, rfl⟩

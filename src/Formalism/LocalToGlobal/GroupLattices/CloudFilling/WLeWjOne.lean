@@ -1,7 +1,6 @@
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.GroupLattices.CloudFilling.CloudBound
 import Formalism.LocalRingCardinality.DataParams
-import Formalism.SharpRestriction.GrowthBounds.IsResidueClassZero
-import Formalism.SharpRestriction.InertJacobiLevels.VVEqEmptyOfNotIsResidueClassZero
 
 noncomputable section
 

@@ -1,8 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDiagonalLagrangianInvariantForm
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ConjMapApply
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HermitianAdaptedPlaneFactor
 
 open scoped TensorProduct NNReal Matrix
@@ -56,7 +54,7 @@ theorem inner_eq_zero {σ : E →ₐ[F] E} {B : Base F E} {n n₁ : ℕ} {X : Sp
   have e : ∑ i, ∑ k, incM F H.ι i m * incM F X.J i k * cA σ (incV F H.x k) =
       inclR (F := F) (AF F) (form σ X.J (H.ι *ᵥ Pi.single m 1) H.x) := by
     rw [Matrix.mulVec_single_one]
-    simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, Finset.mul_sum, Matrix.transpose_apply]
+    simp only [form, dotProduct, Matrix.mulVec, map_sum, map_mul, Finset.mul_sum]
     refine Finset.sum_congr rfl fun i _ => Finset.sum_congr rfl fun k _ => ?_
     simp only [incM, incV, Matrix.map_apply]
     rw [mul_assoc]

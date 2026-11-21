@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.MemSupportQuotientIff
+import Mathlib.RingTheory.TensorProduct.IsBaseChangeRightExact
+import Mathlib.Tactic.Polynomial.Basic
 open CategoryTheory CategoryTheory.Limits TensorProduct
 
 namespace GlobalTheory.SupportBC

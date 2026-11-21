@@ -1,5 +1,5 @@
-import Mathlib
-import Formalism.SharpRestriction.CuspSpanNormBounds.GlobAut
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.CuspSpanNormBounds.UnimodularSchurMeasures.RrgCountableField
 import Formalism.LocalToGlobal.SiegelLatticeTheory.HaarTransversals.FoldBound
 import Formalism.PeriodIntegrals.SymDist

@@ -1,8 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.AutomorphicMembership.ExistsNotCongPow
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ExistsAlgebraMapSubEqSumConjugatesStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ConjPlacesOfSamePrimeBelowStatement
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CrtApproxIntegralStatement
+import ReciprocityTheory.GaloisValuations.Global
 
 noncomputable section
 

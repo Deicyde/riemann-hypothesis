@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.GlobalReciprocity.Frobenius
 import GroundTheory.GlobalFields.GlobalReciprocity.LocalSurjective
-import GroundTheory.GlobalFields.KummerTheory.Splitting
 
 namespace GroundTheory.Global
 

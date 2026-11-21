@@ -1,9 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.FubiniHeadLastPart
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.DerivativeBoundInBanachSpace
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.BudgetTopConvergence
 import Formalism.HermitianCurvature.HermitianCurvatureProofs.InnerAveragingInputOfSliceData
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.AveragingVanishes
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.ComponentFamilySettingOfSetting
 
 open Matrix MeasureTheory Formalism.FourierDecayAlt
 
@@ -108,7 +107,7 @@ theorem ptMatN_one (c : ℂ) : D.ptMatN [(1, c)] 1 = Matrix.of fun _ _ => c := b
   ext i j
   have hi : i.val = 0 := by omega
   have hj : j.val = 0 := by omega
-  simp [D.ptMatN, D.ptEntry, hi]
+  simp [D.ptMatN, D.ptEntry]
 
 theorem hMat_one_single (c : ℂ) : U.hMat (1 : Equiv.Perm (Fin 1)) (fun _ => c) = Matrix.of fun _ _ => c := by
   ext i j

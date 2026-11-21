@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.MatrixMeasurableSpace
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.T2SpaceGeneralLinearGroup
 open ValuativeRel
 open scoped Matrix
@@ -182,8 +182,8 @@ theorem rel_symm {t c : k} (hv : valuation k t < 1) {X Y : Matrix m p k} (h : Re
     rw [← this, P, Matrix.one_mul]
   have key : X + t • (A * X + c • B) + t • (-(A * N) * (X + t • (A * X + c • B)) + c • -(N * B)) =
       X + t • (A * X - (A * N * X + t • (A * N * A * X))) + (t * c) • (B - (N * B + t • (A * N * B))) := by
-    simp only [Matrix.mul_add, Matrix.add_mul, Matrix.mul_smul, Matrix.smul_mul, Matrix.mul_assoc,
-      Matrix.neg_mul, Matrix.mul_neg, smul_add, smul_neg, smul_sub]
+    simp only [Matrix.mul_add, Matrix.mul_smul, Matrix.mul_assoc,
+      Matrix.neg_mul, smul_add, smul_neg, smul_sub]
     module
   rw [key, hQ', hP']
   simp

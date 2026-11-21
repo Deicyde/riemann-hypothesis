@@ -1,8 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.DivisorBase.BoundaryPolynomialFunctions
-import Development.AbelianVarietyTheory.Definitions.Divisors.FirstChernLeviEqConstant
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ContDiffAtLogNorm
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SectionPullbackHolomorphic
+import Mathlib.Topology.Baire.LocallyCompactRegular
+import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential
 
 open ReciprocityTheory.AnForm ReciprocityTheory.AnForm.M GlobalTheory.IndefiniteRowSideFullHecke.BoundaryPolynomialFunctions
 open scoped ContDiff

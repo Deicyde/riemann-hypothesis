@@ -1,5 +1,15 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.ContinuousAevalMvPolynomial
+import Mathlib.Analysis.Analytic.Polynomial
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.RingHom.Etale
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.IsLocalHomeomorph
 
 namespace GlobalTheory.AffinePoints
 
@@ -46,7 +56,7 @@ theorem hasDerivAt_aevalTower_line {R ι : Type*} [CommRing R] [Algebra 𝕜 R] 
       rw [pderiv_mul, pderiv_X]
       by_cases hij : i = j
       · subst hij; simp; ring
-      · simp [hij, Pi.single_eq_of_ne hij]; ring
+      · simp [hij]; ring
     simp only [h1, Finset.sum_add_distrib, Finset.sum_ite_eq, Finset.mem_univ, if_true,
       ← Finset.sum_mul]
     simp

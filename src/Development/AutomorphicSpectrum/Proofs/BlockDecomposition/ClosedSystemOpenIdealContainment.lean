@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.UniformVanishing
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SubsetOfClosedFibre
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SectionsEqUnivOffBadSupportStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MemOfBadSetClosedFibre
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ClosedSubsetSupportProper

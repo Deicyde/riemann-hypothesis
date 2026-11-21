@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Divisors.IotaScalarOne
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
 open GlobalTheory.Sandwich GlobalTheory.IndefiniteRowSideFullHecke.SandwichMaps GlobalTheory.DetInv Matrix TensorProduct
 
 namespace GlobalTheory.DetInv
@@ -69,7 +71,7 @@ theorem frame_of_spanning : ∀ (p : ℕ) [Fact p.Prime] (O : Type) [CommRing O]
       · simp [hk]
     show e (((1 : Ainf p O) ⊗ₜ[ℤ_[p]] l) • bP ⟨i, j⟩) = ρ l *ᵥ e (bP ⟨i, j⟩)
     simp only [ hb, hs,
-      LinearEquiv.coe_coe, hform, Matrix.mulVecLin_apply, map_mul, Matrix.mulVec_mulVec]
+      hform, map_mul, Matrix.mulVec_mulVec]
   exact LinearMap.congr_fun hf w
 
 end GlobalTheory.DetInv

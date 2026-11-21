@@ -1,7 +1,9 @@
-import Mathlib
-import Formalism.LocalToGlobal.Columns.AdjointFrobeniusPreservesRamified
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.CoefficientsModP
 import Formalism.LocalToGlobal.Columns.AtTOwedS
+import Formalism.LocalToGlobal.Columns.ColFormsLemmas
+import Formalism.LocalToGlobal.Columns.SmulMemTrpSet
 
 open NumberField IsDedekindDomain Module
 

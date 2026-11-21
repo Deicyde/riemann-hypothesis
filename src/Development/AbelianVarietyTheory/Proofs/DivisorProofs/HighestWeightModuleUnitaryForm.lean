@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RestrActApply
+import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GlBlockFiniteDimModuleStructure
 
 noncomputable section
 
@@ -64,7 +66,7 @@ lemma hasModel_char (c : Ix R S → ℚ) (hc : ∀ a b, sameBlock a b → c a = 
     rw [hχ, Finset.sum_eq_single a]
     · simp [Eab, single_apply, eq_comm]
     · intro x _ hx
-      simp [Eab, single_apply, hx.symm]
+      simp [Eab, hx.symm]
     · simp
   refine ⟨Unit, inferInstance, inferInstance, χ.smulRight 1, fun _ => 1, fun A B hA hB => ?_, fun a b => ?_,
     fun h0 => one_ne_zero (congrFun h0 ()), fun a => ?_, fun a b hab => ?_⟩
@@ -197,12 +199,12 @@ lemma hasModel_initial (P : Ix R S → Prop) [DecidablePred P] (hP : ∀ a b, po
         · simp [Eab, ha]
         · intro l _ hl
           have : a ≠ l := fun h => hl (Subtype.ext h.symm)
-          simp [Eab, single_apply, this]
+          simp [Eab, this]
         · simp
       · simp only [ha, if_false, Rat.cast_zero]
         refine Finset.sum_eq_zero fun l _ => ?_
         have : a ≠ l := fun h => ha (h ▸ l.2)
-        simp [Eab, single_apply, this]
+        simp [Eab, this]
     · intro x l hx
       rw [Eab, single_apply, if_neg]
       rintro ⟨rfl, rfl⟩

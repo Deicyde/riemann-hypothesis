@@ -1,5 +1,5 @@
-import Formalism.SharpRestriction.GrowthBounds.IsResidueClassZero
-import Formalism.LocalRingCardinality.RankBoundMonotoneInDimension
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalRingCardinality.DataForced
 
 noncomputable section
@@ -112,7 +112,7 @@ variable {N : ℕ} [NeZero N]
 
 theorem val_orbit (h t : ZMod N) (i : ℕ) : (t + i • h).val = (t.val + i * h.val) % N := by
   rw [show t + i • h = ((t.val + i * h.val : ℕ) : ZMod N) by
-    simp [nsmul_eq_mul, ZMod.natCast_zmod_val], ZMod.val_natCast]
+    simp [nsmul_eq_mul], ZMod.val_natCast]
 
 def bsVal (N h t : ℕ) : ℕ := sInf {v | ∃ i : ℕ, (t + i * h) % N = v}
 
@@ -133,7 +133,7 @@ theorem bsC_eq (h t : ZMod N) : ∃ i : ℕ, bsC h t = t + i • h := by
   refine ⟨i, ?_⟩
   unfold bsC
   rw [← hi, ZMod.natCast_mod]
-  simp [nsmul_eq_mul, ZMod.natCast_zmod_val]
+  simp [nsmul_eq_mul]
 
 theorem card_nsmul_zmod (h : ZMod N) : N • h = 0 := by
   rw [nsmul_eq_mul, ZMod.natCast_self, zero_mul]

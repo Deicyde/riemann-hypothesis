@@ -1,8 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.Columns.AbelianHostFieldConditions
 import Formalism.LocalToGlobal.Divisibility.CoeffLemmas
 import Formalism.LocalToGlobal.UnitaryNorms.RealPl
 import Formalism.LocalToGlobal.UnitaryNorms.ExistsCycAct
-import Formalism.FrobeniusOrbits.FrobeniusOrbitsProofs.Inertia
 import Formalism.LocalRingCardinality.SpanPowerMembership.ExampleLayerExistsGenerators
 
 open NumberField IsDedekindDomain IntermediateField

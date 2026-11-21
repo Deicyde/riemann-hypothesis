@@ -1,9 +1,7 @@
-import Mathlib
-import Formalism.SharpRestriction.Divisibility.GeneratorPowers.RStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.GeneratorPowers.RPfVal
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.PullbackSections.HolomorphicFamilies.WeightFloorInequalities
-import Development.AbelianVarietyTheory.Counterexamples.JetSurvey.FormAtOfClause
-import Development.AbelianVarietyTheory.Proofs.FormalGroupCharts.NuAlgLeOfCharts
 
 set_option autoImplicit false
 

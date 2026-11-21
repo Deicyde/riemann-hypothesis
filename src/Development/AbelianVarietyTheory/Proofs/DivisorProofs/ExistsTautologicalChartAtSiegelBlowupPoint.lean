@@ -1,19 +1,11 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.GalRigidOfSurjective
-import Development.AbelianVarietyTheory.Definitions.Divisors.MinSt5OfMinSt4
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsThetaCompact
-import Development.AbelianVarietyTheory.Definitions.Divisors.PullData
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsChartMember
-import Development.AbelianVarietyTheory.Definitions.Divisors.TateProductRigidificationTrivial
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSiegelModuliTraitThroughCompactificationPtStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDegenerationDataTautologicalChartOfTraitStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.UnifPullbackOfCanonicalOnStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsMumfordFamilyStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsSiegelLevelStructureMumfordFamilyTautologiStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsExtNormalisedBlowupStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsProjOverLocallyOfFiniteType
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ArithmeticCurveIsAffineAndFiniteInt
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.IsRegularLocalRingAndIsRelParam
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsComplAtFactorOfIsAdicComplete
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsDataFrom
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TraitChartGenericFibresSameStatement
@@ -165,7 +157,7 @@ theorem GlobalTheory.TChart.exists_chart_at : ∀ g : ℕ, 1 ≤ g → ∀ φ : 
     have h := hFam.2.2.2.2
     rw [hyl, Category.assoc] at h
     rw [h, ← hsA]
-    simp only [jK, spMap, ← Spec.map_comp, ← CommRingCat.ofHom_comp, Category.assoc]
+    simp only [spMap, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
   have hκy := hpt yU hSPB hyUs
   have hξU : spMap (algebraMap C.R (Localization.Away (∏ k, C.t k))) ≫ ξ = yU ≫ j := by
     refine GlobalTheory.ChartHit.away_hom_ext C.R (∏ k, C.t k) htne l hl S _ _ ?_

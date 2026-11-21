@@ -1,6 +1,8 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Foundations.ChiK
-import Development.AbelianVarietyTheory.Statements.CuspidalUnitaryTwists.ZetaUr
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
+import Development.AbelianVarietyTheory.Definitions.Foundations.FinalTheorems
+import Development.AbelianVarietyTheory.Definitions.Foundations.Letter
 
 noncomputable section
 

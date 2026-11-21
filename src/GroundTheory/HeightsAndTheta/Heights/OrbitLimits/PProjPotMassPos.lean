@@ -1,8 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjPotMassPos
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.StatementsProjPotDens
 import GroundTheory.HeightsAndTheta.Heights.OrbitLimits.PCurveDegreeVert
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterRedB
 import ReciprocityTheory.AnalyticForms.PotentialTheory.LocDens
 import ReciprocityTheory.AnalyticForms.PotentialTheory.PotentialContDiffAt
 import ReciprocityTheory.AnalyticForms.PotentialTheory.ContDiffAtOfIsPotential

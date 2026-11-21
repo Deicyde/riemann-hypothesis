@@ -1,14 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.HasDivPlace
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PowEqPowOfModEqSim
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.SimilitudeActionAdelicLatticeStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeVectorBundlePullback
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ValuedIntCastLeIff
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LatticeCompletionEqLatticeVectorAddNsmul
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DualLatticeDegreeNeg
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FlatHermUnitConstant
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsEqNsmulOfActs
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.HopfOrderPullbackAlongHom
 open CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj AlgebraicGeometry NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.AV GlobalTheory.AV.AbVar GlobalTheory.PDivGroup GlobalTheory.Dieu GlobalTheory.UPel.HT GlobalTheory.LKTrip GlobalTheory.LKMid GlobalTheory.LKGeo GlobalTheory.LKRes
@@ -43,7 +34,7 @@ theorem exists_lift_sys : ∀ (p : ℕ) [Fact p.Prime] (D : Datum p) (h₀ : Mod
     obtain ⟨i, rfl⟩ := hy
     obtain ⟨hw, e⟩ := (key n hn hnp i).choose_spec.choose_spec
     have hbi : h n (b i) = (key n hn hnp i).choose := by
-      rw [hh']; simp [Module.Basis.constr_basis]
+      rw [hh']; simp
     refine ⟨_, hw, e.trans ?_⟩
     rw [hbi]
   | zero =>

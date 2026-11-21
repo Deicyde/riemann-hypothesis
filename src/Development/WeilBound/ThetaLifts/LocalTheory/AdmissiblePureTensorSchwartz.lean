@@ -1,6 +1,11 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.ThetaLifts.LocalTheory.Cross
-import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedMultiplicityOneProportional
 import Development.WeilBound.ThetaLifts.LocalTheory.SplitInv2
+import Development.AbelianVarietyTheory.Definitions.Divisors.MatchingOfParts
+import Development.WeilBound.ThetaLifts.ConeHypotheses.PolDense
+import Development.WeilBound.ThetaLifts.LocalTheory.SplitInv
+import Development.WeilBound.ThetaLifts.LocalTheory.UnramifiedDeterminedBySpherical
 
 noncomputable section
 

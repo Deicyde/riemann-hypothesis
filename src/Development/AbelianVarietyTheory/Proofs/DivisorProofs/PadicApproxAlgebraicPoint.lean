@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AlgClosedDenseInCpStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PAdicAlgebraicApproximationStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.PolynomialSystemSpecializationStatement

@@ -1,7 +1,9 @@
-import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.LatMod
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.CharDual
 import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.FactPrincipalDatum
 import Formalism.SharpRestriction.CuspSpanNormBounds.NonemptyParameterModels.TermTiesEmptyOfLargeIndex
+import Formalism.LocalToGlobal.IndefiniteReal.FinitePlaces.IdemSplit
 
 noncomputable section
 

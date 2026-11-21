@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsComplexStructureGaussVacuumFockEquations
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ThetaTriplePolynomialFockStableMulTraceLinear
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.TracePairingArchimedeanVarsNondegenerateRight
@@ -127,7 +125,7 @@ theorem pol_dense_good : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [N
     (Submodule.smul_mem _ _ hmem) ?_ ?_
   · rw [hQc]
     have := hQ x
-    simp only [LinearMap.neg_apply, Complex.neg_re]
+    simp only [Complex.neg_re]
     linarith
   · rw [SchwartzMap.smul_apply, hf x, smul_eq_mul, ← mul_assoc, inv_mul_cancel₀ h0, one_mul, hQc, neg_neg]
   · intro v f f₁ hfN h₁

@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LogVandermondeBounds.FinrankFiberSumZero
 
 namespace Formalism.LogVandermondeBounds.product_first_zeroth_parts

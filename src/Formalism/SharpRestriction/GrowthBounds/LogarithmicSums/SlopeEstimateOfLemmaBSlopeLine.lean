@@ -1,3 +1,5 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.GrowthBounds.LogarithmicSums.Conclusion1OfGainBoundAll
 import Mathlib.NumberTheory.Harmonic.Bounds
 
@@ -122,7 +124,7 @@ theorem topsOn_eq_image (X : Inst D L) (p : ℕ) (hc : IsResidueClassZero D p) (
     rw [hbt] at hi
     have hpos : 0 < addOrderOf (hP D p) := addOrderOf_pos _
     refine ⟨⟨i % addOrderOf (hP D p), Nat.mod_lt _ hpos⟩, ?_, ?_⟩ <;>
-      simp only [Fin.val_mk, mod_addOrderOf_nsmul, hi, htT]
+      simp only [mod_addOrderOf_nsmul, hi, htT]
   · rintro ⟨i, hi, rfl⟩
     exact ⟨hi, by rw [bs_iter, hr]⟩
 

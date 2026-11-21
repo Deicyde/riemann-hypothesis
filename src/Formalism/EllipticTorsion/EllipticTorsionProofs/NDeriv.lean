@@ -1,4 +1,13 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.Statement
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import Mathlib.Topology.Sheaves.Presheaf
 
 noncomputable section
 
@@ -59,8 +68,8 @@ theorem pderiv_subst_coe (p : Polynomial R) {a : MvPowerSeries σ R}
       rw [PowerSeries.coe_substAlgHom, PowerSeries.subst_X hs]
     rw [← Polynomial.smul_X_eq_monomial]
     simp only [Polynomial.coe_smul, Polynomial.coe_pow, Polynomial.coe_X, map_smul, map_pow, hX,
-      Derivation.map_smul, Derivation.leibniz_pow, PowerSeries.derivative_X, map_nsmul, smul_eq_mul,
-      mul_one, map_mul, map_one, nsmul_eq_mul, map_natCast, smul_mul_assoc, mul_assoc]
+      Derivation.map_smul, Derivation.leibniz_pow, PowerSeries.derivative_X, smul_eq_mul,
+      mul_one, map_mul, nsmul_eq_mul, map_natCast, smul_mul_assoc, mul_assoc]
 
 theorem degree_le_of_mem_antidiagonal [DecidableEq σ] {d : σ →₀ ℕ} {x : (σ →₀ ℕ) × (σ →₀ ℕ)}
     (hx : x ∈ Finset.HasAntidiagonal.antidiagonal d) : x.1.degree ≤ d.degree := by

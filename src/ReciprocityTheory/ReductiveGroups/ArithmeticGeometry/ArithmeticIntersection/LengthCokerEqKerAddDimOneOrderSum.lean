@@ -1,4 +1,15 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.LengthEqRangeAddRange
+import Mathlib.Algebra.Module.LocalizedModule.Exact
+import Mathlib.RingTheory.KrullDimension.Field
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Sheaves.Presheaf
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ArithmeticIntersection.LocalLengthAdditivityTorsionFree
+import Std.Tactic.BVDecide.Normalize.Prop
 
 namespace ReciprocityTheory.ChartRestriction.G.AI
 
@@ -257,7 +268,7 @@ theorem finite_dimOne (hdim : ringKrullDim A = 1) :
   intro p hp
   have hp' : ¬ p.asIdeal.IsMaximal := (dim_quot_eq_one_iff hdim p.asIdeal).1 hp
   show p.asIdeal ∈ minimalPrimes A
-  simp only [minimalPrimes, Ideal.minimalPrimes, Set.mem_setOf_eq]
+  simp only [minimalPrimes, Set.mem_setOf_eq]
   refine ⟨⟨p.isPrime, bot_le⟩, fun q hq hqp => ?_⟩
   haveI := hq.1
   exact (eq_of_not_max_of_le hdim hp' hqp).le

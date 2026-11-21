@@ -1,5 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.FieldsOfNumbers.Statements
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.Data.Rat.Star
+import Mathlib.NumberTheory.BernoulliPolynomials
+import Mathlib.Topology.Sheaves.Presheaf
+import Std.Tactic.BVDecide.Normalize.Prop
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.FieldNumbers
@@ -84,7 +91,7 @@ theorem exists_antideriv (k : K) (q : MvPolynomial K ℚ) : ∃ P : MvPolynomial
         have hjk : j ≠ k := by
           rw [Finsupp.support_erase] at hj
           exact (Finset.mem_erase.1 hj).1
-        simp [Pi.single_apply, hjk]
+        simp [hjk]
       have hev : ∀ y : K → ℚ, eval y (Polynomial.aeval (X k) F) = F.eval (y k) :=
         fun y => eval_aeval_X y k F
       rw [hmono, map_mul, map_mul, hsh, hev, hev, map_mul, map_pow, eval_X, ← mul_sub]
@@ -143,7 +150,7 @@ theorem proof : PolyOfDiffs.Statement := by
       funext j
       by_cases hj : j = k
       · subst hj; simp
-      · simp [Pi.single_apply, hj]
+      · simp [hj]
     rw [e3] at e2
     simp only [diffStep] at e1
     push_cast at e1
@@ -165,7 +172,7 @@ theorem proof : PolyOfDiffs.Statement := by
         funext j
         by_cases hj : j = k
         · subst hj; simp
-        · simp [Pi.single_apply, hj]
+        · simp [hj]
       rw [hstep k _ hy, hsh, ih]
 
   have key : ∀ s : Finset K, ∃ Q : MvPolynomial K ℚ, Q.totalDegree ≤ d ∧

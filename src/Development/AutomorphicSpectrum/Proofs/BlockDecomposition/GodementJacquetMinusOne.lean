@@ -1,4 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.LocalWhittakerDuality.WhittakerFunctionalEquationAdditive
 
 open MeasureTheory Matrix GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K.GL2LocalData
@@ -197,7 +198,7 @@ instance nullSingleton (ψ : AddChar F Circle) : NullSingletonClass (selfDualMea
     rw [measure_zero_singleton] at h
     have e : (fun h : F => h + -x) ⁻¹' {(0 : F)} = {x} := by
       ext y
-      simp [add_neg_eq_zero]
+      simp
     rwa [e] at h⟩
 
 theorem ae_ne (ψ : AddChar F Circle) : ∀ᵐ r ∂LFS.vol2 ψ, r (1 : Fin 2) ≠ 0 := by

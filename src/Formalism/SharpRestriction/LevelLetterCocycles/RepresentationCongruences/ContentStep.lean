@@ -1,6 +1,6 @@
-import Formalism.SharpRestriction.LevelLetterCocycles.ArcLiftingSetup
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.RingDataOfCaseAOfP9
-import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.DvdCoeffsOfMemSpanDistinguished
 import Formalism.SharpRestriction.LevelLetterCocycles.RepresentationCongruences.FormalSeriesValueAtTwoPointsGenericPoints
 
 noncomputable section
@@ -187,7 +187,7 @@ theorem content_step (W : LocWach PD LL O v n) (hcase : Formalism.MainNotions.Li
   have hG : letE c * (lA W ^ κ * u₀ - qA W ^ b₀ * algebraMap O (LetA O n) x) =
       letE c * ps W 1 ^ y * u₁ := by
     apply W.EE_inj
-    simp only [map_mul, map_sub, map_one, mul_one, hlE, hxE] at e1 e2 ⊢
+    simp only [map_mul, map_sub, mul_one, hlE, hxE] at e1 e2 ⊢
     linear_combination e2 - lE W κ * e1
 
   have hGc := congrFun hG c
@@ -237,7 +237,7 @@ theorem content_step (W : LocWach PD LL O v n) (hcase : Formalism.MainNotions.Li
     have hsplit : lE W (deA PD.p b₀ y) = lE W (deA PD.p b₀ y - κ) * lE W κ := by
       rw [lE, lE, lE, ← pow_add, Nat.sub_add_cancel hκ]
     rw [← hxE, hlA, hsplit]
-    simp only [map_mul, map_sub, map_one, mul_one, hlE, hxE] at e2 ⊢
+    simp only [map_mul, hlE, hxE] at e2 ⊢
     linear_combination lE W (deA PD.p b₀ y - κ) * e2
   · have hκ' : κ = (κ - deA PD.p b₀ y) + deA PD.p b₀ y := by omega
     have hLmem : (letE (O := O) c : LetA O n) ∈ W.AΔ := fun δ _ => GS.γA_letE W δ c
@@ -256,7 +256,7 @@ theorem content_step (W : LocWach PD LL O v n) (hcase : Formalism.MainNotions.Li
     refine ⟨x', y', hy', ?_⟩
     have hid := congrArg (algebraMap (LetA O n) W.EE) (letE_idem (O := O) c)
     have hzE := congrArg (algebraMap (LetA O n) W.EE) hz
-    simp only [map_mul, map_sub, map_one, map_pow, mul_one, hlE, hxE] at e1 hid hzE ⊢
+    simp only [map_mul, map_sub, map_pow, mul_one, hlE, hxE] at e1 hid hzE ⊢
     linear_combination lE W (deA PD.p b₀ y) * e1 +
       algebraMap (LetA O n) W.EE (letE c) * hzE -
       (lE W (deA PD.p b₀ y) * algebraMap (LetA O n) W.EE u₀ -

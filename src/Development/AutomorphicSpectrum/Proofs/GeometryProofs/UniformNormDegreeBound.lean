@@ -1,16 +1,9 @@
-import Mathlib
-import Development.AutomorphicSpectrum.PublishedTheorems.Geometry₂.NefRR
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.ModelSmall
-import Development.AutomorphicSpectrum.Statements.TowerExistence.GoodTowerExistsX
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.VolumeInputs
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.OverLaUnique
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterNamed
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.InterSt
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.UniformNormHeightCountStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.UniformNormHeightEstimateStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.AllWeightSectionsCompatStatement
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LatticeSectionsCuspLawsStatement
-import Development.AutomorphicSpectrum.Proofs.DivisibilityProofs.FlagDegreeWeightFormula
+import Development.AbelianVarietyTheory.Proofs.CuspFormEvaluations.CoordLetterEquivApplyConjugate
 open NumberField IsDedekindDomain Filter Topology
 open Formalism.L2.Pj ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Geo ReciprocityTheory.ChartRestriction.G.Geo.Tor ReciprocityTheory.ChartRestriction.G.FD Formalism.BasicNotions Formalism.MainNotions
 open GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Rec GlobalTheory.CompanionTheory.Ar.Plug
@@ -38,7 +31,7 @@ theorem exists_intWeight_of_regDominant : ∀ (E : Type) [Field E] [NumberField 
       have h' : conjEmb τ (H.rt : E) = H.rt0 := Small.conjEmb_rt_of_ne h
       have hidx : Dw.p + Dw.q - 1 - (Dw.p + (Dw.q - 1 - i)) = i := by omega
       have hnp : ¬ Dw.p + (Dw.q - 1 - i) < Dw.p := by omega
-      simp [GlobalTheory.AllWt.wtOf, h, h', hq, u, hnp, hidx, GlobalTheory.AllWt.conjEmb_conjEmb]
+      simp [GlobalTheory.AllWt.wtOf, h, h', hq, u, hidx]
 
 theorem limsup_real_eq_of_growth : ∀ (D : ℕ) (r : ℕ → ℕ∞) (t : ℝ), 0 ≤ t → limsup (fun n : ℕ => (D.factorial : ENNReal) * (r n : ENNReal) / (n : ENNReal) ^ D) atTop = ENNReal.ofReal t → limsup (fun n : ℕ => (D.factorial : ℝ) * ((r n).toNat : ℝ) / (n : ℝ) ^ D) atTop = t := by
   intro D r t ht hlim

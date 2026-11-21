@@ -1,7 +1,5 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.SlopeBoundSt
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.ModuliProofs.DeterminantConditionSpreadsOfDensePoints
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.DetCondIffOfFieldExtension
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ConnectedGroupSmoothRelDim
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.EmbeddingFactorsThroughCmType
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LieMultLabelRank

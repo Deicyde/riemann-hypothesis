@@ -1,12 +1,4 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.IsSplitK
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.HermitianMatricesLocallyCompactBorel
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.GramRightActionIdentities
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.TensorLocallyCompactRingStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteAdelesLocalRingTotallyRealStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.CoordinateHaarMeasureStatement
-import CompanionTheory.SpectralGeometry.LocalGlobalProofs.AdelicAnalysis.InfiniteAdeleHaarMapEqScaledVolumeStatement
-import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ComplexCoordinatesExistAtInfinityStatement
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DisintegrationAlongContinuousQuotientMapStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.DensityBoundFromBoxVolumeGrowthStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.MeasurableDensityFromBoxVolumeGrowthStatement
@@ -18,6 +10,8 @@ import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ShearPreservesA
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.ShearPushforwardHermitianMeasureStatement
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SchwartzArchContinuousIntegrableStatement
 import Development.AutomorphicArithmetic.IntegralCasts.CapelliIdentities.DenLE
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.GramNear
+import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.TrMMemFramesEIff
 open scoped Matrix NNReal ENNReal ComplexConjugate TensorProduct
 open Formalism.BasicNotions Formalism.BasicNotions.TH Formalism.MainNotions.GlobalTheoryTheory.GenusMassVolumes Formalism.L2.Theta Formalism.L2.Pj Formalism.IndefR.Datum MeasureTheory
 open GlobalTheory.AutomorphicL2Unitary GlobalTheory.AdelicU GlobalTheory.Doubling GlobalTheory.Cont GlobalTheory.MixModel GlobalTheory.StdUnn PositivityTheory.GramSchwartzFunctions PositivityTheory.GramSchwartzFunctions.BC GlobalTheory.CompanionTheory.SiegelND
@@ -43,7 +37,7 @@ theorem isSplitK_of_isCoord {F E : Type} [Field F] [NumberField F] [Field E] [Nu
   rw [← h1] at h2
   have h3 : Algebra.trace (Ainf F) (Ainf F ⊗[F] E) (algebraMap (Ainf F) (Ainf F ⊗[F] E) a) = 2 * a := by
     rw [Algebra.trace_algebraMap_of_basis (Algebra.TensorProduct.basis (Ainf F) (Module.finBasis F E))]
-    simp [hCM.2.2.1, two_mul, two_nsmul]
+    simp [hCM.2.2.1, two_mul]
   rw [h3, map_mul, map_ofNat] at h2
   have h4 : ((2 : NumberField.InfinitePlace F → ℝ) w) = 2 := rfl
   rw [Pi.mul_apply, h4] at h2
@@ -73,12 +67,12 @@ theorem dom_generic {K W : Type} [CommRing K] [Fintype W] (κ : K ≃+* (W → �
     {ε : ℝ≥0∞} (hε : ε ≠ 0) :
     ∃ R ε' : ℝ, 0 < ε' ∧ ∀ Y, MeasurableSet Y →
       ∫⁻ X in (goodK κ R ε')ᶜ ∩ q ⁻¹' Y, ‖φ X‖ₑ ∂μ ≤ ε * ν Y := by
-  have hε2 : ε / 2 ≠ 0 := by simp [ENNReal.div_eq_top, hε]
+  have hε2 : ε / 2 ≠ 0 := by simp [hε]
   obtain ⟨R, hR, htail⟩ := GlobalTheory.T.exists_box_radius_tail_lintegral_le_eps_mul K W κ n M H μ ν q C₀ hC hbox hq hbm φ hdec (ε / 2) hε2
   set Bc : ℝ≥0∞ := ENNReal.ofReal B with hBc
   have hBt : Bc + 1 ≠ ⊤ := by simp [hBc]
   have hδ : ε / 2 / (Bc + 1) ≠ 0 := by
-    simp [ENNReal.div_eq_top, hε, hBc]
+    simp [hε, hBc]
   obtain ⟨ε', hε', hbad⟩ := GlobalTheory.T.density_bound_from_box_volume_growth K W κ n M hn hM H μ ν q C₀ hC hbox hsh R hR _ hδ
   refine ⟨R, ε', hε', fun Y hY => ?_⟩
   have hsub : (goodK κ R ε')ᶜ ∩ q ⁻¹' Y ⊆ ((boxK κ (fun _ _ => R))ᶜ ∩ q ⁻¹' Y) ∪
@@ -305,7 +299,7 @@ theorem avgInf_tendsto : ∀ (F E : Type) [Field F] [NumberField F] [Field E] [N
         · subst hpq
           simp [HeckeCharacterZeroLocus.SiegelWeilU.cT, g, hsal]
         · have hqp : q ≠ p := fun h => hpq h.symm
-          simp [HeckeCharacterZeroLocus.SiegelWeilU.cT, g, Matrix.diagonal_apply, hpq, hqp]
+          simp [HeckeCharacterZeroLocus.SiegelWeilU.cT, g, hpq, hqp]
       show (HeckeCharacterZeroLocus.SiegelWeilU.cT (sigR (Ainf F) σ) g * (S : Matrix (Fin n) (Fin n) (Ainf F ⊗[F] E)) * g) i j = _
       rw [h1]
       simp only [g, Matrix.mul_diagonal, Matrix.diagonal_mul]

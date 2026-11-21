@@ -1,5 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryDensity.EvalBindTorusSubst
+import Formalism.PeriodIntegrals.UnitaryDense
+import Formalism.PeriodIntegrals.UnitaryGroupMassFormula.UnitaryDensity.GramStep
+import Mathlib.Analysis.CStarAlgebra.Classes
+import Mathlib.Tactic.ReduceModChar
 
 open Matrix MvPolynomial
 open scoped ComplexOrder

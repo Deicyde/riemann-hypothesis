@@ -1,7 +1,6 @@
-import Formalism.SizeWindowBrackets.JointCSlopeExists
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.IntersectionFailsForSubmodule
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SizeWindowBrackets.ChainSlopeWindows.ExistsNsmulMem
-import Formalism.SizeWindowBrackets.ChainSlopeWindows.ChainLatticeSizesModelEventually
 
 open Module NumberField
 open scoped Pointwise

@@ -1,9 +1,6 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.SiegelWeilAnisotropicHermitian
-import Development.AbelianVarietyTheory.Definitions.Divisors.CTSmallCone
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AvgFormApply
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.AddHaarLeftRightMulAdelicMatricesModule
-import Development.AbelianVarietyTheory.Proofs.TwistedOperators.ExistsRestrictScalarsMatrixLeftRightMulAdeleTens
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.DistribHaarCharEqAddEquivAddHaarChar
 
 open scoped TensorProduct NNReal Matrix
@@ -155,7 +152,7 @@ theorem GlobalTheory.SiegelCov.integral_mulVec_inv : ∀ (F E : Type) [Field F] 
   have hu : hΛ.unit = (Units.map (Algebra.norm (AF F) : AE F E →* AF F) (Matrix.GeneralLinearGroup.det t))⁻¹ := by
     ext
     rw [IsUnit.unit_spec, hdet, hTdef]
-    simp [Matrix.GeneralLinearGroup.val_det_apply]
+    simp
   have key := addEquivAddHaarChar_smul_map μ L
   set c := addEquivAddHaarChar L with hcdef
   have hc0 : c ≠ 0 := (addEquivAddHaarChar_pos L).ne'

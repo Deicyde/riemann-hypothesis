@@ -1,11 +1,10 @@
-import Mathlib
-import Development.AutomorphicSpectrum.Definitions.MetricPeriods.IsEigFrames
-import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.BdryChart
-import ReciprocityTheory.AnalyticForms.PlurisubharmonicFunctions.IsPshLocallyIntegrableStatement
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.LogPeriodLimit
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.ExistsIsChart
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.IsotropicSublatticeCovolumePositiveStatement
-import Development.AutomorphicSpectrum.Proofs.MetricProofs.RiemannLatticeEigenProjectionStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.MetricPeriods.ExistsIntSmulIsAdicIntegralInTensorBasis
+import Mathlib.Algebra.AffineMonoid.Basic
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
 
 open NumberField Matrix Filter Topology GlobalTheory.CompanionTheory.Ar GlobalTheory.CompanionTheory.Ar.Cusp GroundTheory.Heights₂.Heights.LowerBoundFree GroundTheory.Heights₂.Heights.Regular
 open GlobalTheory.CompanionTheory.Ar.RiemannLimit GlobalTheory.CompanionTheory.Ar.Cusp.BoundaryLimit
@@ -162,7 +161,7 @@ theorem eigComp_eq_combination : ∀ (E : Type) [Field E] [NumberField E] (s₀ 
     by_cases h : s' = s
     · subst h
       simp [evalHom_tmul]
-    · simp [evalHom_tmul, Pi.single_apply, h]
+    · simp [evalHom_tmul, h]
   have hsum' : ∀ x, ∑ s, actHom ρ (combo (cs s)) x = x := by
     intro x
     have h := congrArg (actHom ρ) hsum
@@ -193,7 +192,7 @@ theorem eigComp_eq_combination : ∀ (E : Type) [Field E] [NumberField E] (s₀ 
       rw [LinearMap.mem_ker, hval _ σ' y hy]
       have hne : extEmb σ' ≠ extEmb s₀ := fun h => hσ' (by
         rw [← extEmb_comp σ', h, extEmb_comp])
-      simp [Pi.single_apply, hne]
+      simp [hne]
     exact fun y hy => hle hy
   have hex : ∀ x, actHom ρ (combo (cs (extEmb s₀))) x ∈ eigSp ρ s₀ ∧
       x - actHom ρ (combo (cs (extEmb s₀))) x ∈ ⨆ σ' ∈ {σ' : 𝓞 E →+* ℂ | σ' ≠ s₀}, eigSp ρ σ' := by

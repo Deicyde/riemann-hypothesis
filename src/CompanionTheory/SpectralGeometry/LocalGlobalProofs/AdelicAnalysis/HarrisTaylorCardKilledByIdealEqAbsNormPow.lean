@@ -1,5 +1,15 @@
-import Mathlib
-import CompanionTheory.SpectralGeometry.CountingDefinitions.AdelicEulerProducts.IsEulerProd
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.UnipotentAdelicQuotients.SWXSDefs
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.MeasureTheory.Integral.Pi
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.SimpleRing.Principal
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Compactness.Paracompact
+import Std.Tactic.BVDecide.Normalize.Prop
 open HeckeCharacterZeroLocus.SiegelWeilU GlobalTheory.CompanionTheory.SW NumberField IsDedekindDomain MeasureTheory Topology
 open scoped TensorProduct ENNReal NNReal Matrix
 
@@ -267,7 +277,7 @@ theorem mean_close (lam : Measure R) [lam.IsAddHaarMeasure] [SigmaFinite lam] (A
     rw [Measure.pi_pi]
     exact ENNReal.prod_lt_top fun _ _ => hAf
   have hvol : (Measure.pi fun _ : ι => lam).real (box ι A) = lam.real A ^ Fintype.card ι := by
-    simp [Measure.real, Measure.pi_pi, ENNReal.toReal_prod]
+    simp [Measure.real, Measure.pi_pi]
   have hone : (c : ℝ) ^ Fintype.card ι * (Measure.pi fun _ : ι => lam).real (box ι A) = 1 := by
     rw [hvol, ← mul_pow, mul_comm, hcm, one_pow]
   have hconst : IntegrableOn (fun _ : ι → R => v) (box ι A) (Measure.pi fun _ : ι => lam) :=

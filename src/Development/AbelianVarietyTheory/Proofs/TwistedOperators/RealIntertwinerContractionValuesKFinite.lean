@@ -1,7 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.TwistedOperators.EqMulProdOfPartial
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsConjModelExt
-import Development.AbelianVarietyTheory.Proofs.IwasawaDecomposition.ContDiffSetIntegralNat
 
 noncomputable section
 

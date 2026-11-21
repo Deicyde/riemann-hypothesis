@@ -1,5 +1,14 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.GlobalFields.TateThesis.TracePairing
+import Mathlib.Algebra.Order.Archimedean.Real.Hom
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.Analysis.Distribution.SchwartzSpace.Fourier
+import Mathlib.LinearAlgebra.Complex.Determinant
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.TotallySplit
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Topology.Separation.CompletelyRegular
 
 namespace GroundTheory.Global
 

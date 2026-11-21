@@ -1,8 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.InterlacingEquivariance
-import Development.AbelianVarietyTheory.BlockTheory.GlobalSignature.OnePlaceBranchStatement
-import Formalism.LocalToGlobal.Columns.PolyFnLemmas
-import Formalism.LocalToGlobal.Columns.CoefficientsModP.FkMapInitMinor
 
 open MvPolynomial NumberField
 

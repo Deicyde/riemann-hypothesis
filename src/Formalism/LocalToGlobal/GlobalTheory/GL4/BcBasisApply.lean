@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.GlobalTheory.GL4.LowerSlopeInequalityFamily
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.GlobalSchurBounds.FlipTwoThree
 
 open Module NumberField
 

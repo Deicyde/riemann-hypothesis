@@ -1,16 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.GrpPullbackId
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLineBundleLiftSquareZeroOfMumfordBundleStatement
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleIsoMumfordLambdaOfLocalQuotientStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ExistsLineBundleOfReductions
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.FormalAlgebraisation
-import Development.AbelianVarietyTheory.Proofs.UniformizationProofs.IsLocalRingQuotientPow
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.SiegelStructurePullback
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsProjBySmoothIsProperGeometricallyIntegral
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsAbelianSchemeOfIsGrpPullback
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.WedgeOrdVpBaseChangeOfNeBot
-import Development.AbelianVarietyTheory.Proofs.ModuliProofs.IsSquareUnique
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AxisTrivialLineBundleGroupPullbackStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.RelAmpleDiagonalPullbackBaseChangeStatement
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.LineBundleThickeningSquareTheoremStatement
 
@@ -93,7 +84,7 @@ theorem root_of_residue : ∀ (S : Scheme.{0}) (A : Over S) [GrpObj A] [IsCommMo
   have le : maximalIdeal R ≤ maximalIdeal R ^ (0 + 1) := by rw [zero_add, pow_one]
   have ethick : thick R (maximalIdeal R) 0 =
       spMap (Ideal.Quotient.factor le) ≫ spMap (residue R) := by
-    simp only [thick, spMap, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
+    simp only [thick, spMap, ← Spec.map_comp]
     rfl
   have hres : Root A P (thick R (maximalIdeal R) 0 ≫ t) := by
     rw [ethick, Category.assoc]

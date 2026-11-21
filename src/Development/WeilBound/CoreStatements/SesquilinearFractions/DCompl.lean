@@ -1,5 +1,10 @@
-import Development.WeilBound.CoreStatements.SesquilinearFractions.DBlock
-import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.ExistsLocalBasisStatement
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Development.AutomorphicSpectrum.Definitions.GlobalGeometry.IsTransition
+import Development.AutomorphicSpectrum.Proofs.AdelicProofs.PadicLogIdealMaxElementStatement
+import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.PadicIntegralIffDenominatorStatement
+import Development.AutomorphicSpectrum.Proofs.AlgebraProofs.UltrametricDetNormLeStatement
+import Development.WeilBound.CoreStatements.SesquilinearFractions.SesqSesquilinearSkewHermitian
 
 open AlgebraicGeometry CategoryTheory Limits MonoidalCategory CartesianMonoidalCategory MonObj NumberField
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor

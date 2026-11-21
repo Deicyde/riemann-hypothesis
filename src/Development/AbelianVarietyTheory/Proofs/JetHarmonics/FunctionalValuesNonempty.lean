@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.SharpRestriction.Divisibility.ModuliIntegralCharts
-import Formalism.SharpRestriction.Divisibility.WeightFamilies
 import Development.AbelianVarietyTheory.BlockTheory.JetGauges.TraceFormDualSystem
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.IsPosHermOfPositive
 

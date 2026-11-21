@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Definitions.Divisors.IsSquareIntegrableIffMemL2
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.IsConstAlongSingleton
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicConjMaxCompact
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.AutomorphicFiniteTranslate
 open scoped TensorProduct NNReal Matrix ComplexConjugate
@@ -47,7 +45,7 @@ theorem GlobalTheory.StdPar.isCuspOn_transl_compact : ∀ (F E : Type) [Field F]
         (LinearMap.funLeft ℂ ℂ (fun y : GAd σ J => y * x))) hx) ?_
     refine ⟨fun g => ψ (g * ofInf σ J (projInf σ J (x⁻¹ * y))), Submodule.subset_span ⟨⟨_, hCK _ hu⟩, rfl⟩, ?_⟩
     funext g
-    simp only [LinearMap.funLeft_apply, Function.comp]
+    simp only [LinearMap.funLeft_apply]
     rw [← hUψ _ hyx (hfin _) (g * x * ofInf σ J (projInf σ J (x⁻¹ * y))), mul_assoc (g * x),
       ofInf_projInf_mul_ofFin_projFin]
     simp [mul_assoc]

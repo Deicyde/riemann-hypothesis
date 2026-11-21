@@ -1,4 +1,4 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import GroundTheory.HeightsAndTheta.Heights.KernelsRest
 set_option maxSynthPendingDepth 1
 
@@ -14,7 +14,7 @@ theorem prod_pow_add_single {r : ℕ} (q : ℕ) (μ : Fin r → ℕ) (σ : Equiv
   simp only [Pi.add_apply, pow_add, Finset.prod_mul_distrib]
   rw [mul_comm]
   congr 1
-  rw [Fintype.prod_eq_single i (fun i' hi' => by simp [Pi.single_apply, hi'])]
+  rw [Fintype.prod_eq_single i (fun i' hi' => by simp [hi'])]
   simp
 
 end KAlt

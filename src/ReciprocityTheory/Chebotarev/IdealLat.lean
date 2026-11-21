@@ -1,5 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import ReciprocityTheory.Chebotarev.UnitPart
 import ReciprocityTheory.Chebotarev.DiscreteTopologyLatOf
+import Mathlib.Topology.Sheaves.Presheaf
+import Mathlib.Topology.UniformSpace.Uniformizable
 
 open NumberField NumberField.mixedEmbedding NumberField.Units
 

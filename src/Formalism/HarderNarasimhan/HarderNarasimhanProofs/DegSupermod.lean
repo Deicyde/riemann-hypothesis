@@ -1,4 +1,5 @@
-import Formalism.HarderNarasimhan.DegSupermodZ
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.HarderNarasimhan.HarderNarasimhanProofs.DegSupermodZ
 
 open Module Submodule

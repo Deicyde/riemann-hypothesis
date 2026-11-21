@@ -1,4 +1,6 @@
-import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsGat
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.LocalToGlobal.GroupLattices.ComparisonMaps.ClsMain
 
 noncomputable section
 

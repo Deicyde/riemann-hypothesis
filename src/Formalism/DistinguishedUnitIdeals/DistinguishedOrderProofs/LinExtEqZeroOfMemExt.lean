@@ -1,6 +1,16 @@
-import Mathlib
-import Formalism.DistinguishedUnitIdeals.CoprimeProd
-import Formalism.DistinguishedUnitIdeals.DistinguishedOrderProofs.GroundTheory
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.DistinguishedUnitIdeals.Statement
+import Mathlib.Algebra.Module.StablyFree.Basic
+import Mathlib.RingTheory.Coalgebra.CoassocSimps
+import Mathlib.RingTheory.PiTensorProduct
+import Mathlib.RingTheory.PicardGroup
+import Mathlib.RingTheory.PowerSeries.NoZeroDivisors
+import Mathlib.RingTheory.RegularLocalRing.Defs
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.ENatToNat
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -243,7 +253,7 @@ theorem linExt_proj (u : Fin r → PowerSeries O) (j : Fin r) :
   rw [linExt_apply, Finset.sum_eq_single j]
   · simp
   · intro i _ hij
-    simp [Pi.single_apply, Ne.symm hij]
+    simp [Ne.symm hij]
   · intro h
     exact absurd (Finset.mem_univ j) h
 
@@ -353,8 +363,7 @@ theorem exists_const_decomp (ϖ : O) (hϖ : Irreducible ϖ) (F C : Submodule O (
       exact h1.symm
     refine ⟨t, ?_⟩
     rw [e]
-    simp only [map_sum, map_smul, Module.Basis.equivFun_self, Finset.sum_apply, Pi.smul_apply, smul_eq_mul,
-      Pi.single_apply]
+    simp only [map_sum, map_smul, Module.Basis.equivFun_self, Finset.sum_apply, Pi.smul_apply, smul_eq_mul]
   let Φ : _ → (Fin r → O) →ₗ[O] O := fun j =>
     LinearMap.proj j ∘ₗ snf.bM.equivFun.toLinearMap ∘ₗ F.mkQ
   have hΦ : ∀ j v, Φ j v = snf.bM.equivFun (F.mkQ v) j := fun j v => rfl
@@ -688,7 +697,7 @@ theorem descent_estimate_up_down : MUD := by
             map_mul, map_pow] at hi ⊢
           rw [hLamE] at hi ⊢
           rw [hLL0]
-          simp only [pow_add, map_mul, map_pow] at hi ⊢
+          simp only [pow_add] at hi ⊢
           have hαβ' := hαβ
           rw [map_pow] at hαβ'
           linear_combination (C ϖ ^ c) * hi +

@@ -1,5 +1,7 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.RootExchangeStatement
+import Mathlib.RingTheory.Henselian
+import Mathlib.RingTheory.RegularLocalRing.Defs
 
 open ReciprocityTheory.Ty.Fin
 
@@ -23,7 +25,7 @@ theorem chainUnion_remove_right (m k t : ℕ) (q : Fin m) (hq : (q : ℕ) = t + 
   apply propext
   rcases i with a | w <;> rcases j with b | v <;>
     simp only [chainUnion, chainPat, Fin.lt_def, Sum.isRight_inl, Sum.isRight_inr, Sum.inl.injEq,
-      Sum.inr.injEq, reduceCtorEq, Bool.false_eq_true, false_and, and_false, true_and, and_true,
+      reduceCtorEq, Bool.false_eq_true, false_and, and_false, true_and, and_true,
       not_false_eq_true, Fin.ext_iff] <;> omega
 
 theorem chainUnion_remove_left (m k t : ℕ) (p : Fin m) (hp : (p : ℕ) = t) :
@@ -33,7 +35,7 @@ theorem chainUnion_remove_left (m k t : ℕ) (p : Fin m) (hp : (p : ℕ) = t) :
   apply propext
   rcases i with a | w <;> rcases j with b | v <;>
     simp only [chainUnion, chainPat, Fin.lt_def, Sum.isRight_inl, Sum.isRight_inr, Sum.inl.injEq,
-      Sum.inr.injEq, reduceCtorEq, Bool.false_eq_true, false_and, and_false, true_and, and_true,
+      reduceCtorEq, Bool.false_eq_true, and_false, and_true,
       not_false_eq_true, Fin.ext_iff] <;> omega
 
 theorem chain_step (K : Type) [Field K] [Fintype K] [DecidableEq K] (m k t : ℕ) (ψ₀ : AddChar K ℂ)

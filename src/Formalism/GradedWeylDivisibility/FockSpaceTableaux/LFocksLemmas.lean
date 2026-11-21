@@ -1,5 +1,8 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.GradedWeylDivisibility.StatementA
 import Formalism.RealPlaceAnalysis.RealPlaceTaylor.ProdFactorialSupportSubSingle
+import Mathlib.RingTheory.PiTensorProduct
 
 open MvPolynomial Formalism.REAL
 

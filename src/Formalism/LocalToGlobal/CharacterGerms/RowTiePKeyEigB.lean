@@ -1,6 +1,7 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.CharacterGerms.RowTiePKeyEigA
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePKeyJointDef
-import Formalism.LocalToGlobal.CharacterGerms.RowTiePKeyTeichDef
+import Formalism.LocalToGlobal.CharacterGerms.RowTiePGmExLem
 
 noncomputable section
 

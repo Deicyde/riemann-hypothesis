@@ -1,6 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenySeparable
 import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenyFrobeniusSep
+import Mathlib.Algebra.Ring.IsFormallyReal
+import Mathlib.RingTheory.PicardGroup
 
 namespace GroundTheory.Arith.Abelian
 

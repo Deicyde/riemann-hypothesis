@@ -1,4 +1,7 @@
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.RelevantMonotoneOfParts
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
+import Formalism.HermitianCurvature.FiniteOrderIntersectionInSmooth
+import Mathlib.Tactic.ENatToNat
 
 open Matrix Formalism.FourierDecayAlt Formalism.QuantumDeterminants
 
@@ -228,7 +231,7 @@ theorem lower_triangular_splitting : C2.LowSplit := by
     by_cases hab : a = b
     · subst hab
       simp [hd a]
-    · simp [Matrix.one_apply_ne hab, w.injective.ne hab, Ne.symm hab]
+    · simp [Matrix.one_apply_ne hab, Ne.symm hab]
   have hPinv : (C2.monoP w d)⁻¹ = Q := Matrix.inv_eq_left_inv hQP
   have hPdet : IsUnit (C2.monoP w d).det := Matrix.isUnit_det_of_left_inverse hQP
   have hconj : ∀ (X : Matrix (Fin m) (Fin m) ℂ) (a b : Fin m),
@@ -236,7 +239,7 @@ theorem lower_triangular_splitting : C2.LowSplit := by
     intro X a b
     rw [hPinv, Matrix.mul_apply]
     simp only [Matrix.mul_apply, hQ, C2.monoP, Matrix.of_apply, ite_mul, zero_mul, mul_ite,
-      mul_zero, Finset.sum_ite_eq', Finset.sum_ite_eq, Finset.mem_univ, if_true]
+      mul_zero, Finset.sum_ite_eq', Finset.mem_univ, if_true]
   have I := inv_step w l hl m
   set A := (lsStep w l m).1 with hAdef
   set B := (lsStep w l m).2 with hBdef

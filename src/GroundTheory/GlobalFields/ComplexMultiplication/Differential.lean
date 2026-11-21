@@ -1,7 +1,7 @@
-import Mathlib
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.IsogenyPoints
-import GroundTheory.ArithmeticGeometry.AbelianVarieties.KernelCard
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ArithmeticGeometry.SchemeCohomology.KaehlerPlace
+import GroundTheory.ArithmeticGeometry.AbelianVarieties.DualIsogeny
 
 namespace GroundTheory.Global
 

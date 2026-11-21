@@ -1,6 +1,12 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
 import Formalism.EllipticTorsion.UnitCancel
-import Formalism.FormalGroupLog.LogDeterminesLaw
+import Formalism.FormalGroupLog.FormalGroupLogProofs.ConstantCoeffSubstOfZero
+import Formalism.FormalGroupLog.FormalGroupLogProofs.HomPsSubstMvSubst
+import Mathlib.Data.Int.Star
+import Mathlib.Tactic.Monotonicity.Lemmas
+import Mathlib.Topology.Sheaves.Presheaf
 
 open PowerSeries
 

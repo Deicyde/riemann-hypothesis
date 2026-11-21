@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.BlockTheory.NonGaloisCusps.OnePlusPowerAssembly
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CyclotomicExistsIff
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.ZpowSmulMem
 import Development.AbelianVarietyTheory.Proofs.InertiaEigenvalues.CompOneAddPowMul

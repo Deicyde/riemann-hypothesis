@@ -1,5 +1,11 @@
-import Mathlib
-import GroundTheory.HeightsAndTheta.Heights.HilbertSamuel.IsConeAnalyticSubset
+import BuildAid.Leniency.Variable
+import Mathlib.Tactic.Linarith.NNRealPreprocessor
+import BuildAid.Leniency.Open
+import Mathlib.Algebra.Order.Star.Real
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
+import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.IsSemipositiveOn
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.Heights₂.Heights.IndefiniteRowSideFullHecke.HilbertSamuel
@@ -22,7 +28,7 @@ def bil : (J → ℂ) →L[ℝ] ((J → ℂ) →L[ℝ] ℝ) :=
   ∑ p, ((reP p).smulRight (reP p) + (imaginary p).smulRight (imaginary p))
 
 theorem bil_apply (u v : J → ℂ) : bil u v = ∑ p, (reP p u * reP p v + imaginary p u * imaginary p v) := by
-  simp [bil, ContinuousLinearMap.sum_apply]
+  simp [bil]
 
 theorem reP_apply (p : J) (z : J → ℂ) : reP p z = (z p).re := rfl
 

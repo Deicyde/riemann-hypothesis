@@ -1,4 +1,4 @@
-import Development.AutomorphicArithmetic.Foundations.Convolution.EndomorphismSlices.SphComm2
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.Convolution.EndomorphismSlices.FiniteAdelicEstimates.MultOfKer
 import Development.WeilBound.RepresentationTheoryGL.ArchimedeanBaseChange.ArchimedeanBaseChangeProof.HeckeFubiniCompatibility.PInfConv
 

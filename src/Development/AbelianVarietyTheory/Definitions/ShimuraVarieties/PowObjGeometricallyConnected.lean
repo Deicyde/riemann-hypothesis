@@ -1,8 +1,7 @@
-import Mathlib
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.SabPull
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Example
+import BuildAid.Leniency.Open
 import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.BirationalGeometry.ToroidalCompactification.BCTools
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.DegProd
-import ReciprocityTheory.ReductiveGroups.ArithmeticGeometry.ExtensionDescent.RosatiAdj
 import Development.AbelianVarietyTheory.Proofs.HomogeneousIdeals.LocallyOfFinitePresentation
 
 set_option autoImplicit false
@@ -771,7 +770,7 @@ def powAct {n : ℕ} (p : IsPowGrp G' G n) (a : OAct O G) : OAct O G' where
   hom c := isMonHom_of_mul_comp _ fun T x y ↦ pow_hom_ext p fun i ↦ by
     have := p.hom i
     have := a.hom c
-    simp [MonObj.mul_comp, MonObj.mul_comp_assoc]
+    simp [MonObj.mul_comp]
   one := pow_hom_ext p fun i ↦ by simp [a.one]
   mul c d := pow_hom_ext p fun i ↦ by simp [a.mul]
   add c d := pow_hom_ext p fun i ↦ by

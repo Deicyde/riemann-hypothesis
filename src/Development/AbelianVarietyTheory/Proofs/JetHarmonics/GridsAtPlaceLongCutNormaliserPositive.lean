@@ -1,9 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Definitions.Jets.SupWOfSup
-import Development.AbelianVarietyTheory.PublishedTheorems.BesselIntegrals.BesselXiIntegrable
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.Cut_BPEq
-import Formalism.HermitianCurvature.HermitianCurvatureProofs.CutLimENF
-import Formalism.HermitianCurvature.HerGenC
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ProdFinEqProdIcc
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.ExistsGridFiveApartOnCut
 import Development.AbelianVarietyTheory.Proofs.JetHarmonics.WaveGridLiftGridOfLayoutNormaliserBoundStatement

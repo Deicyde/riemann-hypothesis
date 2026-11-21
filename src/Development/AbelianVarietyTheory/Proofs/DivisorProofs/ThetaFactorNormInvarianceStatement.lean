@@ -1,7 +1,5 @@
-import Mathlib
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ThetaFactorNormInvariance
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.ReQuad
 open Matrix GlobalTheory.IndefiniteRowSideFullHecke.SiegelReframe GlobalTheory.ThetaMet
 open scoped Real ContDiff
 set_option maxHeartbeats 1000000 in

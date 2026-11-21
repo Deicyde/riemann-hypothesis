@@ -1,4 +1,10 @@
-import Development.WeilBound.RepresentationTheoryGL.UnitaryDualProof.CompactOrbits.Descent.OpenSlices.OpenSlice
+import BuildAid.Leniency.Open
+import Formalism.SharpRestriction.RamificationFrobenius.TotientGaloisClasses.EvalFrameOrd
+import Mathlib.MeasureTheory.Group.ModularCharacter
+import Mathlib.Order.CompletePartialOrder
+import Mathlib.RingTheory.WittVector.IsPoly
+import Mathlib.Tactic.Polynomial.Basic
+import Mathlib.Tactic.ReduceModChar
 
 noncomputable section
 
@@ -66,7 +72,7 @@ theorem modularCharacterFun_eq_one {G : Type*} [Group G] [TopologicalSpace G] [I
     rw [map_apply (measurable_mul_const g) hKo.measurableSet]
     have : (fun x => x * g) ⁻¹' (K : Set G) = (fun y => g * y) ⁻¹' (K₂ : Set G) := by
       ext x
-      simp only [Set.mem_preimage, SetLike.mem_coe, hK₂, mul_assoc, inv_mul_cancel_left]
+      simp only [Set.mem_preimage, SetLike.mem_coe, hK₂, inv_mul_cancel_left]
     rw [this, measure_preimage_mul]
   have hK₂eq : μ K₂ = μ K := by
     rw [measure_subgroup_eq μ K₂ K' h2 hK₂o hK'o (h3 ▸ h4),

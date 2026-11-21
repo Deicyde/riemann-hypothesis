@@ -1,7 +1,8 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.SuppBCOfMix
-import Development.AutomorphicArithmetic.Foundations.GaloisRepresentations.RegularSemisimpleFibres.ResEmbCompat
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.InvariantSubspaceMobiusInverseOneProdIcoStatement
 import Development.AbelianVarietyTheory.Proofs.CharacterTheory.RootPowerSumCharacterAdditiveAndXSubOnePowStatement
+import Development.AbelianVarietyTheory.Definitions.NonGaloisDescent.MkMemAdmissibleAtIffCocycle
 
 open NumberField IsDedekindDomain ValuativeRel Polynomial Formalism.ConjugateSelfDual ReciprocityTheory.Gal Formalism.BasicNotions Formalism.L2.Host
 open GlobalTheory.PRep GlobalTheory.SmGL GlobalTheory.SplitWeil GlobalTheory.LocGL GlobalTheory.CuspRep GlobalTheory.WeilDeligne GlobalTheory.LocLanglands GlobalTheory.Shin
@@ -89,7 +90,7 @@ theorem UpperTheory.Gal.InertialTypesAlt.jdPair :
       GlobalTheory.BI.IsChar ℂ ℂ (J θ M n) := by
     intro M hM n hn
     have hc := (hC F θ hθ).2 ⟨q, [], M⟩ ⟨hq2, by simp, hM⟩ hq
-    simp only [Lbl.D, Lbl.L, Lbl.rk] at hc
+    simp only [Lbl.rk] at hc
     rw [JD_nil] at hc
     exact char_cast θ M (by simp [GlobalTheory.Shin.deg] at hn ⊢; omega) hc
   have key : ∀ E : List (ℕ × ℕ), (∀ x ∈ E, 0 < x.1) →

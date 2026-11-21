@@ -1,7 +1,8 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Formalism.LocalToGlobal.NormalizedHeckeFactors.HeckeStdTwOfStd
-import Formalism.LocalToGlobal.Divisibility.RowSideTie
-import Formalism.SharpRestriction.LevelLetterCocycles.SumRepresentations
+import Formalism.LocalRingCardinality.DataIdx
+import Formalism.LocalToGlobal.Columns.AlgebraMapMemMaximalIdealPowIff
 
 noncomputable section
 

@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.MeanSquareBounds.PrimeSetTwoBounds
 import Formalism.GL3MeanSquares.HookFormulaTorsion.TwistIsPrimitiveCharacter
 import Formalism.GL3MeanSquares.HookFormulaTorsion.WeightedVonMangoldtSumIdentity

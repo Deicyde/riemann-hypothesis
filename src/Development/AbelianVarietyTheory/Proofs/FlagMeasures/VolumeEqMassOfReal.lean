@@ -1,7 +1,4 @@
-import Mathlib
-import Formalism.LocalToGlobal.GlobalTheory.GL5.FamilyMassVolumeIdentityOfClassDecomp
-import Formalism.LocalToGlobal.BesselHermitianTheta.Lemmas
-import Formalism.SharpRestriction.GlobalSchurBounds.ThickPlacesCorollaryOfAnyTranslate
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.DoubleCosetsMassLevel
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.GenusMassStdAll
 

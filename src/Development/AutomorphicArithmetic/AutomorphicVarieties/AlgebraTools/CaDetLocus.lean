@@ -1,6 +1,4 @@
-import Mathlib
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CotInd
-import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.DetLocus
+import BuildAid.Leniency.Open
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaDetMin
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaDetDim
 import Development.AutomorphicArithmetic.AutomorphicVarieties.AlgebraTools.CaDetAdj

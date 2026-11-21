@@ -1,3 +1,4 @@
+import BuildAid.Leniency.Open
 import Formalism.HermitianCurvature.LetterProductDoubleDegreeCount
 
 open Formalism.FourierDecayAlt Matrix
@@ -67,8 +68,7 @@ theorem gram_cofactor_identity : C7.GramCofactor := by
   unfold C7.cofX'
   simp only [map_sum, map_smul, LinearMap.sum_apply, LinearMap.smul_apply, smul_eq_mul,
     LinearMap.map_smulₛₗ, h]
-  simp only [mul_ite, mul_zero, ite_and, Finset.sum_ite_eq', Finset.mem_univ, if_true, Finset.sum_ite_irrel,
-    Finset.sum_const_zero]
+  simp only [mul_ite, mul_zero, ite_and, Finset.sum_ite_eq', Finset.mem_univ, if_true]
   rw [cofactor_corner_identity r (C7.zhat B f x')]
   rw [← Complex.mul_conj]
   ring

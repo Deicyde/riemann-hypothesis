@@ -1,10 +1,9 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.SDecomposition
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.Decompose
 import GroundTheory.ProfiniteCohomology.GlobalClassFormation.IdeleCohomology.Ramified
-import GroundTheory.GlobalFields.KummerTheory.Splitting
 import GroundTheory.GlobalFields.KummerTheory.SplittingInfinite
-import GroundTheory.ProfiniteCohomology.ContinuousCochains.LongExactSequence
 set_option maxSynthPendingDepth 1
 
 namespace GroundTheory.ProfCoh

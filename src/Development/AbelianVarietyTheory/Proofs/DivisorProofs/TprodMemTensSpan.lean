@@ -1,5 +1,5 @@
-import Mathlib
-import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TprodMemDegLE
+import BuildAid.Leniency.Open
+import Formalism.LocalRingCardinality.DataTheta
 
 noncomputable section
 

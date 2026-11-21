@@ -1,6 +1,7 @@
-import Mathlib
-import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.ConstantTermModerateGrowth
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AutomorphicSpectrum.Proofs.BlockDecomposition.SplitInducedRepresentationHypothesis
+import PositivityTheory.AutomorphicForms.PublishedInputs.CuspidalContinuity.ArchimedeanCuspidal.KFiniteVectors.KFiniteThetaLifts.PureThetaTransfer.AdmM
 open NumberField IsDedekindDomain MeasureTheory Matrix Filter Topology GroundTheory.Global GroundTheory.LocalField GroundTheory.Automorphic Ad3 Ad3.K Ad3.K.QuadraticBaseChangeGL3 Ad3.K.QuadraticBaseChangeGL3.Th
 open GroundTheory.Automorphic.GodementSection (localChar)
 open GroundTheory.Automorphic.Reduction (finAt infAt maxCompact)
@@ -65,7 +66,7 @@ theorem rWS_zero_point (χ : AddChar F Circle) {m : Matrix (Fin 2) (Fin 2) F} (h
     have e : (u * ((s, s⁻¹) : F × F)).1 * (u * ((s, s⁻¹) : F × F)).2 = u.1 * u.2 := by
       simp only [Prod.fst_mul, Prod.snd_mul]
       field_simp
-    simp only [e, Prod.fst_zero, Prod.snd_zero, mul_zero, zero_mul, add_zero]
+    simp only [e, Prod.fst_zero, Prod.snd_zero, mul_zero, add_zero]
 
 theorem det_normal (g : GL (Fin 2) F) :
     (!![g.val 0 0 / (g.val).det, g.val 0 1; g.val 1 0 / (g.val).det, g.val 1 1] :

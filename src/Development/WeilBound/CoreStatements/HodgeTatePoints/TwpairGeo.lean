@@ -1,9 +1,10 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.WeilBound.CoreStatements.HodgeTatePoints.TwpairAlg
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.FiniteOpenHopfOrder
 import Development.AutomorphicSpectrum.Proofs.GeometryProofs.IsFinOpenSubOfFinite
-import Development.AutomorphicSpectrum.Proofs.GeometryProofs.ExistsDenominatorRegular
 import Development.AbelianVarietyTheory.Proofs.FoundationProofs.FinitePartLePreimageOfClosedFibreSubset
+import Mathlib.RingTheory.Etale.Weakly
 
 open CategoryTheory Limits AlgebraicGeometry MonoidalCategory CartesianMonoidalCategory MonObj TensorProduct
 open GlobalTheory.CompanionTheory.Ar.BT GlobalTheory.CompanionTheory.Ar.BT.SubOrder
@@ -121,7 +122,7 @@ theorem exists_tensor_of_prod (s : Γ((Γ.G ⊗ Γ.G).left, ⊤)) :
     rw [hρ, ← Spec.map_comp, ← CommRingCat.ofHom_comp]
     congr 2
     ext r
-    simp [iR, Algebra.TensorProduct.algebraMap_apply'])
+    simp [iR])
   refine ⟨valAt (lift x y).left ⊤ le_top s, ?_⟩
   intro a b ha hb
   let φ : B ⊗[R] B →+* FractionRing R :=

@@ -1,6 +1,6 @@
-import Mathlib
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.AbelianVarietyTheory.Proofs.DivisorProofs.TotalEqOfNonneg
-import Development.AbelianVarietyTheory.PublishedTheorems.Divisors₂.EqOfIsometricTrivShift
 open CategoryTheory AlgebraicGeometry TopologicalSpace Filter Topology MeasureTheory
 open ReciprocityTheory.ChartRestriction.G ReciprocityTheory.ChartRestriction.G.Semi ReciprocityTheory.ChartRestriction.G.Geo.Tor
 open GlobalTheory GlobalTheory.CxPts GlobalTheory.VB GlobalTheory.HermFrame GlobalTheory.CurveDens GlobalTheory.Cartier
@@ -75,7 +75,7 @@ theorem dbar_scaled {b c : E → ℝ} {g : E → ℂ} {z : E} (hc : Differentiab
   rw [ofReal_norm_sq]
   have h1 : conj (g z) ≠ 0 := (map_ne_zero _).2 hg0
   have h2 : (c z : ℂ) ≠ 0 := by exact_mod_cast h0.ne'
-  simp only [map_zero, map_div₀]
+  simp only [map_div₀]
   field_simp
   ring
 
@@ -132,7 +132,7 @@ theorem GlobalTheory.CurveDens.angleForm_frame_indep (E : Type) [NormedAddCommGr
   have h2 : conj (g z) ≠ 0 := (map_ne_zero _).2 hg0
   have h3 : (a z : ℂ) ≠ 0 := by exact_mod_cast ha0.ne'
   have h4 : (a' z : ℂ) ≠ 0 := by exact_mod_cast ha0'.ne'
-  simp only [map_mul, map_sub, map_add, map_div₀, map_inv₀, Complex.conj_conj]
+  simp only [map_mul, map_sub, map_add, map_div₀, Complex.conj_conj]
   generalize del (fun x => (Real.log (a' x) : ℂ)) z ξ = A
   generalize dbar (fun x => (Real.log (a x) : ℂ)) z ξ = B
   generalize del q z ξ = Q1

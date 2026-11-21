@@ -1,4 +1,9 @@
+import BuildAid.Leniency.Variable
+import BuildAid.Leniency.Open
 import Development.EtaleCohomology.KummerTheory.LimitPf
+import Mathlib.Algebra.Order.Ring.Star
+import Mathlib.CategoryTheory.CofilteredSystem
+import Mathlib.CategoryTheory.Functor.OfSequence
 
 noncomputable section
 open CategoryTheory Limits AlgebraicGeometry Opposite GlobalTheory.EtC
